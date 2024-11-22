@@ -1,6 +1,4 @@
 import turtle
-import math
-import time
 
 # Set up the screen and turtle
 screen = turtle.Screen()
@@ -15,12 +13,14 @@ pen.pensize(1)
 pen.color("black")
 
 # Golden ratio's ratio is 1.618
-G = 1.1
+G = 1.618
 def draw_golden_spiral(spiral_length):
-    R = 1
+    R = 3
     pen.hideturtle()
+    pen.speed(0)
     for i in range(spiral_length):
         turtle.color("gray")
+        turtle.speed(0)
         print(i + 1, ": ", R)
         for _ in range(4):
             turtle.fd(R)
@@ -87,7 +87,7 @@ pen.pendown()
 pen.speed(0)
 
 # Draw the golden spiral
-draw_golden_spiral(60)  
+draw_golden_spiral(15)  
 # draw_fibonacci_squares(15)
 # draw_fibonacci_star(15)
 # draw_fibonacci_flower(6)
